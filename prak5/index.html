@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<!-- Untuk judul halaman dan referensi ke file CSS eksternal -->
+<head>
+    <title>Kalkulator</title>
+    <link rel="stylesheet" type="text/css" href="Bagas Satrio_121140077_Prak5.css">
+</head>
+<body>
+    <!-- Untuk header halaman web yang berisi judul "KALKULATOR" dan gambar logo. -->
+    <header>
+        <h1>KALKULATOR</h1>
+        <img src="logabagas.png" alt="Logo" width="200">
+    </header>
+    </div>
+    <div class="calculator">
+        <!-- Untuk elemen input yang menampilkan layar kalkulator. Atribut readonly menghindari penggunaan keyboard untuk mengubah isinya secara manual. -->
+        <input type="text" id="display" class="display" readonly>
+        <!-- Untuk tombol kalkulator. -->
+        <div class="button-row">
+            <button class="button" onclick="appendToDisplay('7')">7</button>
+            <button class="button" onclick="appendToDisplay('8')">8</button>
+            <button class="button" onclick="appendToDisplay('9')">9</button>
+            <button class="button" onclick="appendToDisplay('+')">+</button>
+        </div>
+        <div class="button-row">
+            <button class="button" onclick="appendToDisplay('4')">4</button>
+            <button class="button" onclick="appendToDisplay('5')">5</button>
+            <button class="button" onclick="appendToDisplay('6')">6</button>
+            <button class="button" onclick="appendToDisplay('-')">-</button>
+        </div>
+        <div class="button-row">
+            <button class="button" onclick="appendToDisplay('1')">1</button>
+            <button class="button" onclick="appendToDisplay('2')">2</button>
+            <button class="button" onclick="appendToDisplay('3')">3</button>
+            <button class="button" onclick="appendToDisplay('*')">*</button>
+        </div>
+        <div class="button-row">
+            <button class="button" onclick="appendToDisplay('0')">0</button>
+            <button class="button" onclick="appendToDisplay('.')">.</button>
+            <button class="button" onclick="calculateResult()">=</button>
+            <button class="button" onclick="appendToDisplay('/')">/</button>
+        </div>
+        <div class="button-row">
+            <button class="button" onclick="clearDisplay()">C</button>
+        </div>
+    </div>
+
+    <!-- Ini adalah blok skrip JavaScript. -->
+    <script>
+        //Fungsi ini menambahkan nilai yang diklik oleh pengguna ke layar kalkulator
+        function appendToDisplay(value) {
+            document.getElementById("display").value += value;
+        }
+        //Fungsi ini menghapus isi layar kalkulator
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+        //Fungsi ini menghitung hasil matematika yang ada di layar kalkulator. Hasilnya akan ditampilkan di layar
+        function calculateResult() {
+            try {
+                document.getElementById("display").value = eval(document.getElementById("display").value);
+            } catch (error) {
+                document.getElementById("display").value = "Error";
+            }
+        }
+    </script>
+    <!-- Ini adalah bagian footer halaman web yang berisi hak cipta. -->
+    <footer>
+        <p>&copy; 2023 Bagas Satrio</p>
+    </footer>
+</body>
+</html>
