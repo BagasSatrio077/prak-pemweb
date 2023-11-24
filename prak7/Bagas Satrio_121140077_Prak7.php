@@ -14,7 +14,7 @@ class DataDiri {
   }
 
   //untuk membuat method untuk menampilkan data diri
-  public function tampilData() {
+  public function tampildata() {
     echo "Nama: " . $this->nama . "<br>";
     echo "Alamat: " . $this->alamat . "<br>";
     echo "Email: " . $this->email . "<br>";
@@ -25,7 +25,7 @@ class DataDiri {
 $data1 = new DataDiri("Bagas Satrio", "Kemiling", "bagas@gmail.com");
 $data2 = new DataDiri("Anibas Larisa", "Way Halim", "anibas@gmail.com");
 
-//untuk memanggil method tampilData dari objek
-$data1->tampilData();
-$data2->tampilData();
+//untuk memanggil method tampildata dari objek
+$data1->tampildata();
+$data2->tampildata();
 ?>
